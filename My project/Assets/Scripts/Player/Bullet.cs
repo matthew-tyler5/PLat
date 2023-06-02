@@ -6,12 +6,12 @@ public class Bullet : MonoBehaviour
 {
     public float projectileSpeed;
     public GameObject impactEffect;
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rb;
 
      void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        rigidbody.velocity = transform.right * projectileSpeed;
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * projectileSpeed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -5,19 +5,19 @@ using UnityEngine;
 public class HealthScipt : MonoBehaviour
 {
     
-    public int health;
+    public int currentHealth;
     public int maxHealth = 10;
     void Start()
     {
-        health = maxHealth;
+        currentHealth = maxHealth;
 
     }
 
     // Update is called once per frame
     public void TakeDamage(int amount)
     {
-        health -= amount;
-        if (health <= 0)
+        currentHealth -= amount;
+        if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }

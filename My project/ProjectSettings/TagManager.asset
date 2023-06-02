@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Currency
+  - Equipment
   layers:
   - Default
   - TransparentFX
