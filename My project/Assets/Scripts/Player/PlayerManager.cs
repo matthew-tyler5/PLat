@@ -6,16 +6,6 @@ public class PlayerManager : MonoBehaviour
 {
     public int cointCount;
     
-    public void PickupItem(GameObject obj)
-    {
-        switch(obj.tag)
-        {
-            case "Currency":
-                cointCount++;
-                break;
-             default:
-                break;
-        }
-    }
+   
 
 }

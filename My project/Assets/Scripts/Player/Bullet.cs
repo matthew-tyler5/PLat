@@ -20,6 +20,10 @@ public class Bullet : MonoBehaviour
         {
             enemyComponent.TakeDamage(1);
         }
+        if (collision.gameObject.TryGetComponent<BossBehavior>(out BossBehavior bossComponent))
+        {
+            bossComponent.TakeDamage(1);
+        }
 
         Destroy(gameObject);
 

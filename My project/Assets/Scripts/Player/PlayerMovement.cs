@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float jumpingPower = 10f;
     private bool isFacingRight = true;
 
+    public PlayerManager cm;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -48,6 +49,14 @@ public class PlayerMovement : MonoBehaviour
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
             transform.localScale = localScale;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Currency"))
+        {
+            Destroy(other.gameObject);
+            cm.cointCount++;
         }
     }
 }

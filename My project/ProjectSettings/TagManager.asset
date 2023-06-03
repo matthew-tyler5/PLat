@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Currency
   - Equipment
+  - Boss
   layers:
   - Default
   - TransparentFX
